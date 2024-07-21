@@ -19,5 +19,5 @@ Todo o projeto está hospedado no [Render](https://render.com/) e eu uso [Node](
 
 ### Esta documentação irá ajudá-lo a se familiarizar com os recursos da API do Notes e mostrar como fazer diferentes consultas, para que você possa aproveitá-la ao máximo.
 
-#### Todas as respostas retornarão dados em <kbd>JSON</kbd> e <kbd>HTML<kbd>.
+#### Todas as respostas retornarão dados em <kbd>JSON</kbd> e <kbd>HTML</kbd>.
 
