@@ -22,7 +22,7 @@ router.post('/signup', validateUserRestration, async (request, response) =>{
 
         users.push(newUser)
 
-        response.status(201).json(`Seja bem vindo ${name}! Pessoa usuária registrada com sucesso!`)
+        response.status(201).send(`Seja bem vindo ${name}! Pessoa usuária registrada com sucesso!`)
 
     } catch {
         response.status(500).json({
@@ -38,16 +38,16 @@ router.post('/login', validateUserLogin, async (request, response) =>{
         const user = users.find(user => user.email === email)
 
         if(!user){
-            return response.status(404).json({message: "Email não encontrado no sistema, verifique ou crie uma conta"})
+            return response.status(404).send("Email não encontrado no sistema, verifique ou crie uma conta")
         }
 
         const passwordMatch = await bcrypt.compare(password, user.password)
 
         if(!passwordMatch){
-            return response.status(404).json({message: "Credenciais invalidas"})
+            return response.status(404).send("Credenciais invalidas")
         }
 
-        response.status(200).json({message: `Seja bem vindo ${user.name} ! Pessoa usuária logada com sucesso!`})
+        response.status(200).send(`Seja bem vindo ${user.name} ! Pessoa usuária logada com sucesso!`)
     }catch{
         response.status(500).json({
             message: 'Erro ao entrar na pagina.'
