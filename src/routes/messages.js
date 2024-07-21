@@ -15,7 +15,7 @@ router.post('/message/:email', validateCreateMessage, (request, response) =>{
     const user = users.find(user => user.email === email)
 
     if(!user){
-        return response.status(404).send("Email não encontrado, verifique ou crie uma conta")
+        return response.status(404).json({message: "Email não encontrado, verifique ou crie uma conta"})
     }
 
     const newMessage = {
@@ -40,7 +40,7 @@ router.get('/message/:email', (request, response) => {
     const messag = messages.filter(msm => msm.email === email)
 
     if(!messag){
-        return response.status(404).send("Email não encontrado, verifique ou crie uma conta")
+        return response.status(404).json({message: "Email não encontrado, verifique ou crie uma conta"})
     }
 
     response.status(200).json({
@@ -59,7 +59,7 @@ router.put('/message/:id', validateUpdateMessage, (request, response) => {
     const mensag = messages.find(msm => msm.idMessage === id)
 
     if(!mensag){
-        return response.status(404).send("Por favor, informe um id válido da mensagem")
+        return response.status(404).json({message: "Por favor, informe um id válido da mensagem"})
     }
 
     mensag.title = title
@@ -78,13 +78,12 @@ router.delete('/message/:id', (request, response) =>{
     const messag = messages.findIndex(msm => msm.idMessage === id)
 
     if(messag === -1){
-        return response.status(404).send("Mensagem não encontrada, verifique o identificador em nosso banco")
+        return response.status(404).json({message: "Mensagem não encontrada, verifique o identificador em nosso banco"})
     }
 
     messages.splice(messag, 1)
-    console.log(messages)
-    console.log(messag)
-    response.status(200).send("Mensagem apagada com sucesso")
+  
+    response.status(200).json({message: "Mensagem apagada com sucesso"})
 })
 
 export default router
