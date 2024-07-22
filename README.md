@@ -1,47 +1,53 @@
-# API Lista de Recados
+# API Message List
 
-## Sobre 
+## 🤔 About 
 
-Essa API REST(ish) foi construida com o intuito de aprendizado, como avaliação por termino de modulo de Back-end I. pois estou no curso de desenvolvimento web fullstack na [Growdev](https://www.growdev.com.br/). Neste módulo aprendemos sobre lógica de programação, javascript, API Rest, NodeJS, Express, libs e como fazer upload de uma aplicação back-end para produção, e como último desafio deste módulo, fomos solicitados a criar esta API de notas!
+This REST(ish) API was built for learning purposes, as an evaluation for the end of the Back-end I module, as I am in the fullstack web development course at [Growdev](https://www.growdev.com.br/). In this module we learned about programming logic, javascript, Rest API, NodeJS, Express, libs and how to upload a back-end application for production, and as the last challenge of this module, we were asked to create this notes API!
+
+## 💻 Technologies Used
+
+![Express](https://img.shields.io/badge/Express-303030?style=for-the-badge&logo=express&logoColor=white)
+![Node](https://img.shields.io/badge/Node-3c823b?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-efd81d?style=for-the-badge&logo=javascript&logoColor=black)
 
 
-## Features
+## 💡 Features 
 
-- Criação de conta (Signup);
-- Entrar na conta (Login);
-- CRUD (create, read, update e delete) de notas.
+- Account creation (Signup);
+- Logging into the account (Login);
+- CRUD (create, read, update and delete) of notes.
 
 
-### Documentação
-Para mais informações
+### Documentation
+For more information
  - https://documenter.getpostman.com/view/36608923/2sA3kUHheY
 
-#### Todas as respostas retornarão dados em <kbd>JSON</kbd> e <kbd>HTML</kbd>.
+## Dependencies
 
-## Dependencias
+### Development dependencies:
 
-### Dependencias de Desenvolvimento:
+- **nodemon**: ^3.1.4
+- **sucrase**: ^3.35.0
 
-    nodemon: ^3.1.4
-    sucrase: ^3.35.0
+### Production dependencies: 
 
-### Dependencias de produção: 
-
-    bcrypt: ^5.1.1
-    cors: ^2.8.5
-    express: ^4.19.2
-    uuid: ^10.0.0
+- **bcrypt**: ^5.1.1
+- **cors**: ^2.8.5
+- **express**: ^4.19.2
+- **uuid**: ^10.0.0
   
-## Clonar do GitHub e Instalação
+## Cloning from GitHub and Installation
 
-Para clonar o repositório do GitHub, execute o seguinte comando:
+To clone the GitHub repository, run the following command:
 
 ```console
 git clone https://github.com/Renner-Mk/Final-Back-End-I
 ```
 
-Depois de clonar o repositório, instale as dependências usando Yarn com o seguinte comando:
+After cloning the repository, install the dependencies using Yarn with the following command:
 
 ```console
 npm install
 ```
+
+👾 Developed by [Patrick Renner Miranda](https://www.linkedin.com/in/patrick-renner01/).
